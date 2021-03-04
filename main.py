@@ -1,14 +1,13 @@
 import os
-import requests  # noqa We are just importing this to prove the dependency installed correctly
-
+import endid
 
 def main():
-    my_input = os.environ["INPUT_MYINPUT"]
+    token = os.environ["INPUT_TOKEN"]
+    message = os.environ["INPUT_MESSAGE"]
 
-    my_output = f"Hello {my_input}"
+    endid_output = endid.call(token=token, message=message, writeprefs=False, readprefs=False, printoutput=True)
 
-    print(f"::set-output name=myOutput::{my_output}")
-
+    print(f"::set-output name=response::{endid_output}")
 
 if __name__ == "__main__":
     main()

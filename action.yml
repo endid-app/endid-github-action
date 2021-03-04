@@ -1,13 +1,17 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "Endid Action"
+description: "Call Endid's simple API to notify a Slack channel"
+author: "Dan Lester"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
+  token:
+    description: "Token for a Slack channel (obtain by typing /endid)"
+    required: true
+  message:
+    description: "Message to include in the Slack notification"
+    default: ""
+    required: false
 outputs:
-  myOutput:
-    description: "Output from the action"
+  response:
+    description: "Response from Endid API"
 runs:
   using: "docker"
   image: "Dockerfile"
