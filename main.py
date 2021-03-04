@@ -4,6 +4,9 @@ import os
 import endid
 
 def main():
+    """
+    Call Endid's Python API using inputs from GitHub Action
+    """
     token = os.environ["INPUT_TOKEN"]
     message = os.environ["INPUT_MESSAGE"]
 
