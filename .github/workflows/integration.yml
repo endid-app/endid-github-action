@@ -12,6 +12,7 @@ jobs:
 
         with:
           token: ${{ secrets.endid_token }}
+          message: "From GitHub Actions!"
 
       - name: Check outputs
         run: |
